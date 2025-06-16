@@ -1,13 +1,4 @@
-FROM python:3.12-slim
-
-# Ensure essential tools and distutils are available
-RUN apt-get update && \
-    apt-get install -y \
-    python3-distutils \
-    python3-pip \
-    gcc \
-    curl && \
-    rm -rf /var/lib/apt/lists/*
+FROM python:3.12
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
