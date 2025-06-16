@@ -1,7 +1,9 @@
 FROM python:3.12-slim
 
 # Install distutils
-RUN apt-get update && apt-get install -y python3-distutils && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && \
+    apt-get install -y python3-distutils python3-apt gcc && \
+    rm -rf /var/lib/apt/lists/*
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
